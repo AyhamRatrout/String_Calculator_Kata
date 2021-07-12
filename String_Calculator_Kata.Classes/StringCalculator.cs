@@ -24,7 +24,7 @@ namespace String_Calculator_Kata.Classes
             else
             {
                 var sum = 0;
-                var numbersArray = numbers.Split(',');
+                var numbersArray = numbers.Split(',', '\n');
                 foreach(var number in numbersArray)
                 {
                     sum += int.Parse(number.Trim());
