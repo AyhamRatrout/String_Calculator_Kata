@@ -89,7 +89,7 @@ namespace String_Calculator_Kata.Classes
             Parse each resulting String into an int. Selects the Strings that can be Parsed to int and converts the resulting IEnumerable<int>
             to a List<int>. Returns the resulting List<int>.
         */
-        public static List<int> ExtractListOfNumbers(string numbers, params string[] delimiters)
+        private List<int> ExtractListOfNumbers(string numbers, params string[] delimiters)
         {
             return numbers.Split(delimiters, StringSplitOptions.None).Where(x => int.TryParse(x, out int value)).Select(int.Parse).ToList();
         }
